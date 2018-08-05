@@ -8,15 +8,26 @@
 <body>
 	<div id="tech47"></div>
 	<script type="text/javascript">
-		const element1 = React.createElement(
-			'h1',
-			 {id:'elt1'},
-			 'Welcome to all of you'
+		const name = 'Tech47'
+		const alias = '@tech47'
+		const nameElement = React.createElement(
+			'div',
+			 null,
+			 name
+		)
+		const aliastElement = React.createElement(
+			 'div',
+			 null,
+			 `Welcome  to ${name} meetUp`
+		)
+		
+		const wrapper = React.createElement(
+			'div',
+			{id:'container'},
+			nameElement, aliastElement
 			)
-		console.log(element1)
-
 	ReactDOM.render(
-		element1,
+		wrapper,
 		document.getElementById('tech47')
 	)
 	</script>
