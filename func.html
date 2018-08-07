@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tech47 MeetUp August 11 2018</title>
+	<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+	<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+</head>
+<body>
+	<div id='app'></div>
+<script>
+	const name = 'xyz'
+	function Element1(props) {
+		console.log(props)
+		return React.createElement(
+			 'h1',
+			 {id:'elt1'},
+			 'Welcome'
+			)
+	}
+
+console.log(Element1())
+function NameElement1(props) {
+		return React.createElement(
+			 'div',
+			 null,
+			 `Welcome  ${name}`
+			)
+	}
+function Wrapper(props) {
+	return React.createElement(
+			 'div',
+			 {id:'container'},
+			 Element1(), NameElement1()
+)
+}
+
+ReactDOM.render(
+	 Wrapper(),
+	 document.getElementById('app')
+)
+console.log(ReactDOM)
+
+</script>
+	
+</body>
+</html>
